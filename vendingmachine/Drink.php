@@ -2,14 +2,18 @@
 
 namespace vendingmachine ;
 
-interface Drink {
+abstract class Drink {
     
-    public function getPrice():float ;
+    public function getPrice():float {
+        return $this->price ;
+    }
     
-    public function getDescript():string ;
+    public function getDescript():string {
+        return $this->descript ;
+    }
     
 }
 
 /*
-il aurait aussi été possible de faire de Drink une classse où seraient définies les méthodes, avec juste des propriétés 
+il aurait aussi été possible de faire de Drink une interface
  */

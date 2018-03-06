@@ -4,7 +4,7 @@ namespace vendingmachine\topping ;
 
 use vendingmachine\Drink ;
 
-abstract class Topping implements Drink {
+abstract class Topping extends Drink {
     
     protected $drink ;
     

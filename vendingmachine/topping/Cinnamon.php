@@ -5,17 +5,17 @@ namespace vendingmachine\topping ;
 use vendingmachine\Drink ;
 
 class Cinnamon extends Topping {
-    
-    public function __construct(Drink $drink) {
-        parent::__construct($drink) ;
-    }
+    //méthode A (voir WhippedCream pour la B)
+    protected $price = 0.25 ;
+    protected $descript = " with cinnamon" ;
     
     public function getPrice():float {
-        return $this->drink->getPrice() + 0.25 ;
+        return $this->drink->getPrice() + $this->price ;
     }
     
     public function getDescript():string {
-        return $this->drink->getDescript() . " with cinnamon" ;
+        $desc = $this->drink->getDescript().$this->descript ;
+        return $desc ;
     }
     
 }

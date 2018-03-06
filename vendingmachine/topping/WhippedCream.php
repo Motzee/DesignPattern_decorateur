@@ -6,10 +6,7 @@ use vendingmachine\Drink ;
 
 class WhippedCream extends Topping {
     
-    public function __construct(Drink $drink) {
-        parent::__construct($drink) ;
-    }
-    
+    //méthode B (voir Cinnamon pour la A)
     public function getPrice():float {
         return $this->drink->getPrice() + 0.75 ;
     }
